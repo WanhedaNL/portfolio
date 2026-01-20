@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: burlywood;
+  
   font-family: system-ui, sans-serif;
 }
 
@@ -14,8 +14,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsla(0, 50%, 4%, 1);
-  box-shadow: 0 10px 40px rgba(148, 2, 14, 0.6);
+ 
   height: 100px;
 }
 
@@ -29,15 +28,12 @@ body{
 }
 
 .top-bar nav ul li a{
-  color: red;
   text-decoration: none;
   padding: 10px;
   transition: 0.3s;
 }
 
 .top-bar nav ul li a:hover{
-  color: orange;
-  background-color: blue;
   border-radius: 50%;
 }
 
@@ -45,8 +41,7 @@ body{
 .hero-content{ 
   display: inline-block;
 
-  background-image:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.1));
+  
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -61,14 +56,17 @@ body{
 
 
 
+
 .hero-left-text{
     display: grid;
     flex-direction: column;
  
   display: grid;
-  gap: 20px;
-  margin: 0;            /* önemli */
+  
+  margin: 10px;            /* önemli */
   max-width: 1000px;
+
+
   
 }
 
@@ -83,12 +81,8 @@ body{
 
  #hello-topbar,
  #name-topbar{
-  color: hsla(0, 22%, 96%, 0.9);
   font-size: clamp(80px, 5vw, 50px);
   text-decoration: underline;
-  text-shadow:
-    1px 1px 2px rgb(202, 202, 135),
-    0 0 0.1em rgba(255, 0, 0, 0.09);
   font-weight: 900;
   letter-spacing: 0.25ch;
   margin: 70px;
@@ -109,8 +103,9 @@ body{
   margin: 40px auto;
   padding-inline: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: clamp(24px, 4vw, 60px);
+  grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 100px;
+
 }
 
 /* ---------------- ABOUT ---------------- */
@@ -119,7 +114,7 @@ body{
   grid-template-columns: auto 1fr;
   gap: 40px;
   align-items: center;
-  border: 5px solid red;
+  
 }
 
 @media (max-width: 768px){
@@ -155,37 +150,117 @@ body{
   text-align: justify;
 }
 
-/* ---------------- PROJECTS ---------------- */
-.right-column{
-    border: 5px solid red;
+/* ---------------- Skilss ---------------- */
+.skills-layout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  
+  max-width: 100%;
+
 }
+
+.skills-content{
+ 
+ text-align: center;
+ display: flex;
+ gap: 50px;
+ flex-direction: column;
+
+}
+
+.skills-content ul{
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+
+}
+
+.skills-content ul li{
+  background-color: #c78c27;
+  width: 100%;
+  max-width: 1024px;
+  text-align: center;
+   padding: 12px clamp(16px, 6vw, 48px);
+  border-radius: 20px;
+}
+
+/* ---------------- PROJECTS ---------------- */
+
+.right-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+
+}
+
 #projects{
   width: 100%;
+  max-width: 1200px;
 }
 
 .projects-grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
+    max-width: 360px;
+  margin-inline: auto;
+  grid-template-columns: repeat(3, minmax(360px, 1fr));
+  
+
+  gap: 50px;
+  padding: 40px 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+ 
+  
+  
 }
 
 .project-card{
-  background: white;
-  padding: 15px;
-  border-radius: 12px;
+ display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 25px;
+  min-height: 450px;
   text-align: center;
-  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.03); 
+  border-radius: 20px; /* Köşeleri daha yuvarlak yaptık */
+  border: 1px solid var(--border);
+  backdrop-filter: blur(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .project-card:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  transform: translateY(-15px) scale(1.02); /* Hover'da daha belirgin büyüme */
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent);
 }
 
 .project-card img{
   width: 100%;
   height: auto;
   border-radius: 8px;
+  object-fit: cover;
+}
+.project-card h3 {
+  margin: 10px;
+  font-size: 1.8rem; /* Başlığı büyüttük */
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 /* ---------------- CONTACT ---------------- */
@@ -206,4 +281,145 @@ body{
 textarea{
   resize: vertical;
   min-height: 120px;
+}
+
+
+/*  Color style    */
+
+ :root {
+  --text: #F0F0F2;
+  --muted: #A0A0AB;
+  --border: rgba(255, 255, 255, 0.08);
+  --surface: #16161D;
+  --accent: #6366F1;   /* Modern Indigo */
+  --accent-2: #AC94FA; /* Soft Violet */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+body {
+  /* Arka planı daha derin ve akıcı hale getirdik */
+  background: 
+    radial-gradient(1200px 600px at 20% 10%, rgba(99, 102, 241, 0.15), transparent 55%),
+    radial-gradient(900px 500px at 80% 30%, rgba(172, 148, 250, 0.12), transparent 60%),
+    linear-gradient(180deg, #0B0B10 0%, #12121A 40%, #0F0F14 100%);
+  color: var(--text);
+  font-family: 'Inter', sans-serif; /* Daha modern bir font önerisi */
+}
+
+.top-bar nav {
+  background: rgba(15, 15, 20, 0.75); /* Cam efekti için hafif artırıldı */
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+}
+
+.top-bar nav ul li a:hover {
+  color: #FFFFFF;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-radius: 999px;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+/* Hero bölümündeki text shadow'u neon etkisine çevirdik */
+#hello-topbar,
+#name-topbar {
+  color: var(--text);
+  text-shadow: 0 0 25px rgba(99, 102, 241, 0.4);
+}
+
+/* Proje kartlarını biraz daha "Glass" yaptık, çok sert beyazdan kurtardık */
+.project-card {
+  background: rgba(255, 255, 255, 0.03); 
+  color: var(--text);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card h3 {
+  color: #FFFFFF;
+}
+
+.project-card p {
+  color: var(--muted);
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Hover efekti eklendi */
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Input odaklanma rengini Accent ile uyumlu yaptık */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+input[type="submit"] {
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #FFFFFF;
+  transition: opacity 0.2s;
+}
+
+@media (max-width: 768px){
+
+  /* NAVBAR */
+  .top-bar nav{
+    height: auto;
+    padding: 12px 0;
+  }
+  .top-bar nav ul{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* HERO */
+  .hero-content{
+    height: auto;
+    max-height: none;
+    padding: 20px 0;
+  }
+  #hello-topbar,
+  #name-topbar{
+    font-size: clamp(36px, 6vw, 64px);
+    margin: 12px 0;
+    letter-spacing: 0.12ch;
+    text-align: center;
+  }
+  .hero-left-text #name-topbar{
+    margin: 12px 0;
+  }
+
+  /* ABOUT */
+  .about-text-content{
+    text-align: center;
+  }
+
+  /* SKILLS */
+  .skills-layout{
+    padding: 0 16px;
+  }
+  .skills-content{
+    gap: 20px;
+  }
+  .skills-content ul{
+    gap: 12px;
+  }
+  .skills-content ul li{
+    max-width: 100%;
+    padding: 12px 16px; /* <- 200px padding gitti */
+  }
+
+  /* PROJECTS */
+  .projects-grid{
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    padding: 20px 10px;
+  }
+  .project-card{
+    min-height: auto;
+    padding: 18px;
+  }
 }
