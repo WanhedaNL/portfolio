@@ -8,7 +8,12 @@ const Contact = () => {
   };
 
   return (
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+/>,
     <section id="contact">
+
       <div className="contact-form">
         <h2>CONTACT</h2>
         <form onSubmit={handleSubmit}>
