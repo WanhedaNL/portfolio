@@ -1,5 +1,5 @@
 import './App.css';
-
+import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
   const handleSubmit = (e) => {
@@ -28,9 +28,9 @@ const Contact = () => {
         </form>
         <div className="social-contacts">
           <ul>
-            <li><a href="https://www.instagram.com/"><i className="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.linkedin.com/"><i className="fab fa-linkedin"></i></a></li>
-            <li><a href="https://github.com/WanhedaNL"><i className="fab fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/"><FaInstagram /></a></li>
+<li><a href="https://www.linkedin.com/"><FaLinkedin /></a></li>
+<li><a href="https://github.com/WanhedaNL"><FaGithub /></a></li>
           </ul>
         </div>
       </div>
