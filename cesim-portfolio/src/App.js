@@ -65,7 +65,8 @@ function App() {
         <div className="content-wrapper">
           <section id="about">
             <article className="about-text-content">
-              <p>Wat mij typeert als developer is mijn leergierigheid ve focus op kwaliteit...</p>
+              <p>Wat mij typeert als developer is mijn nieuwsgierigheid en mijn motivatie om continu nieuwe technologieën en programmeertalen te leren.
+                 Ik werk graag aan projecten waarin ik mezelf kan ontwikkelen en mijn vaardigheden kan verbeteren.</p>
             </article>
           </section>
 
