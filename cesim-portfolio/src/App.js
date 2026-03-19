@@ -7,12 +7,12 @@ const Contact = () => {
     alert("Youw message has been sent! I will get back to you as soon as possible.");
   };
 
-  return (
-    <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+ return (
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 />,
-    <section id="contact">
+  <section id="contact">
 
       <div className="contact-form">
         <h2>CONTACT</h2>
@@ -33,9 +33,9 @@ const Contact = () => {
         </form>
         <div className="social-contacts">
           <ul>
-            <li><a href="https://www.instagram.com/"><FaInstagram /></a></li>
-<li><a href="https://www.linkedin.com/"><FaLinkedin /></a></li>
-<li><a href="https://github.com/WanhedaNL"><FaGithub /></a></li>
+             <li><a href="https://www.instagram.com/"><FaInstagram /></a></li>
+            <li><a href="https://www.linkedin.com/"><FaLinkedin /></a></li>
+            <li><a href="https://github.com/WanhedaNL"><FaGithub /></a></li>
           </ul>
         </div>
       </div>
