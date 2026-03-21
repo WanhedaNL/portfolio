@@ -2,35 +2,58 @@ import './App.css';
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert("Youw message has been sent! I will get back to you as soon as possible.");
-  };
+ 
 
  return (
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-/>,
+
   <section id="contact">
 
       <div className="contact-form">
         <h2>CONTACT</h2>
-        <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label htmlFor="fname">First Name</label>
-            <input type="text" name="firstname" id="fname" placeholder="Type your name" required />
-          </div>
-          <div className="input-group">
-            <label htmlFor="email">Email</label>
-            <input type="email" name="email" id="email" required />
-          </div>
-          <div className="input-group">
-            <label htmlFor="message">Your message</label>
-            <textarea id="message" name="message" required placeholder="Typ..."></textarea>
-          </div>
-          <input className="submit-btn" type="submit" value="Submit" />
-        </form>
+
+        <form
+  action="https://formspree.io/f/xjgadvpy"
+  method="POST"
+>
+  <div className="input-group">
+    <label htmlFor="fname">First Name</label>
+    <input
+      type="text"
+      name="firstname"
+      id="fname"
+      placeholder="Type your name"
+      required
+    />
+  </div>
+
+  <div className="input-group">
+    <label htmlFor="email">Email</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+    />
+  </div>
+
+  <div className="input-group">
+    <label htmlFor="message">Your message</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      placeholder="Type..."
+    ></textarea>
+  </div>
+
+  <button type="submit" className="submit-btn">
+    Submit
+  </button>
+</form>
+
+
+
+        
         <div className="social-contacts">
           <ul>
              <li><a href="https://www.instagram.com/"><FaInstagram /></a></li>
