@@ -42,20 +42,26 @@ body {
   gap: 20px;
   list-style: none;
 }
-
 .top-bar nav ul li a {
   text-decoration: none;
-  padding: 10px 20px;
+  padding: 10px 30px;
   color: inherit;
-  transition: 0.3s;
+
+  transition: all 0.8s ease;
+
+  
+  
 }
 
 .top-bar nav ul li a:hover {
   color: #FFFFFF;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  border-radius: 999px;
-  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  border-radius: 90px;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+  transform: translateY(-10px);
+  
 }
+
 
 /* ---------------- HERO ---------------- */
 .hero-content { 
@@ -72,7 +78,7 @@ body {
 }
 
 #hello-topbar, #name-topbar {
-  font-size: clamp(80px, 5vw, 50px);
+  font-size: clamp(50px, 5vw, 80px);
   text-decoration: underline;
   font-weight: 900;
   letter-spacing: 0.25ch;
@@ -96,23 +102,29 @@ body {
 
 /* ---------------- ABOUT ---------------- */
 #about {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 40px;
+
+  display: flex;
+  justify-content: center;
   align-items: center;
+  max-width: 1400px;
+
+  
 }
 
 .about-text-content {
   font-size: clamp(1rem, 2vw + 0.5rem, 1.4rem);
-  text-align: justify;
   hyphens: auto;
+ max-width: 800px;
+  text-align: center;
+  
+
 }
 
 /* ---------------- SKILLS ---------------- */
 .skills-layout{
   display: block;
   width: 100%;
-  place-items: center;
+  place-items: grid;
   height: 681.8px;
   
   
@@ -188,13 +200,23 @@ width: auto;
 }
 .skills-content{
  text-align: center;
+
  
  
 }
 
 /* ---------------- PROJECTS ---------------- */
+.hidden{
+  opacity: 0;
 
+   transform: translateY(90px);
+   transition: opacity  3s  ease,transform 3s ease;
 
+}
+.show{
+  opacity: 1;
+  transform: translateY(0);
+}
 #projects { 
   display: block; 
   width: 100%;
@@ -213,7 +235,7 @@ width: auto;
   padding: 40px;
 }
 .project-card {
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: center;
   padding: 25px;
@@ -232,18 +254,37 @@ width: auto;
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 .project-card:hover{
+  
   border: solid 4px rgba(253, 33, 9, 0.818);
   
 }
+/*
 .project-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
-
+*/
 .project-card h3 { font-size: 1.8rem; margin: 15px 10px; color: #FFFFFF; }
-.project-card p { font-size: 1.1rem; color: var(--muted); }
+
+.project-card p { 
+  font-size: 1.1rem; ;
+  font-weight: 800;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: oblique;
+  
+}
+.project-card a{
+  text-decoration: none;
+   color: rgb(220, 20, 60);
+   font-weight: 900;
+   word-spacing: 2px;
+   line-height: 2px;
+   cursor: pointer;
+
+}
+
 
 /* ---------------- CONTACT & SOCIAL ---------------- */
 #contact { padding: 40px 20px; }
@@ -310,7 +351,8 @@ input:focus, textarea:focus {
 
 
 
-.input-group input,textarea{
+.input-group input,
+.input-group textarea{
   width: 100%;
   padding: 10px;
   font-size: 16px;

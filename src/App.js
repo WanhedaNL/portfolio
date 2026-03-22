@@ -1,6 +1,7 @@
 import './App.css';
+import { useEffect } from "react";
 import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
-
+import { initScroll } from "./scroll.js";
 const Contact = () => {
  
 
@@ -8,13 +9,12 @@ const Contact = () => {
 
   <section id="contact">
 
-      <div className="contact-form">
+      <div className="contact-form hidden">
         <h2>CONTACT</h2>
 
-        <form
-  action="https://formspree.io/f/xjgadvpy"
-  method="POST"
->
+       <form action="https://formspree.io/f/xjgadvpy" method="POST">
+  <input type="hidden" name="_next" value="./App.js" />
+
   <div className="input-group">
     <label htmlFor="fname">First Name</label>
     <input
@@ -67,13 +67,18 @@ const Contact = () => {
 };
 
 function App() {
+  useEffect(() => {
+    initScroll();
+  }, []);
+
   return (
+    
     <div className="App">
       <header>
         <div className="top-bar">
           <nav>
             <ul>
-              <li><a href="#" className="active">HOME</a></li>
+              <li ><a href="#" >HOME</a></li>
               <li><a href="#">ABOUT</a></li>
               <li><a href="#">PROJECTS</a></li>
               <li><a href="#">BLOG</a></li>
@@ -83,8 +88,8 @@ function App() {
         </div>
         <div className="hero-content hero-text">
           <div className="hero-left-text">
-            <h1 id="hello-topbar">Hello</h1>
-            <h1 id="name-topbar">I'm Cesim</h1>
+            <h1 id="hello-topbar">Hallo</h1>
+            <h1 id="name-topbar">Ik ben Cesim</h1>
           </div>
         </div>
       </header>
@@ -93,8 +98,7 @@ function App() {
         <div className="content-wrapper">
           <section id="about">
             <article className="about-text-content">
-              <p>Wat mij typeert als developer is mijn nieuwsgierigheid en mijn motivatie om continu nieuwe technologieën en programmeertalen te leren.
-                 Ik werk graag aan projecten waarin ik mezelf kan ontwikkelen en mijn vaardigheden kan verbeteren.</p>
+              <p>Wat mij typeert als developer is mijn nieuwsgierigheid en mijn sterke motivatie om continu nieuwe technologieën en programmeertalen te leren. Ik werk graag aan projecten waarin ik mezelf kan blijven ontwikkelen en mijn vaardigheden verder kan verbeteren.</p>
             </article>
           </section>
 
@@ -102,7 +106,7 @@ function App() {
 
           <section className="skills-content">
             <h1>Skills</h1>
-            <article className="skills">
+            <article className="skills hidden">
               <ul>
                 <li>HTML (BASIC)</li>
                 <li>CSS (BASIC)</li>
@@ -114,10 +118,42 @@ function App() {
 
           <section id="projects">
             <div className="projects-grid">
-              <div className="project-card">
-                 <h3>Title project-1</h3>
-                 <p>about app</p>
+
+
+              <div className="project-card hidden" >
+                  <h3>Car Dashboard</h3>
+                   <a 
+                        href="https://github.com/WanhedaNL/car-dashboard" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="github-link"
+  >
+                           View on GitHub
+                    </a>
+
+  <p>A full-stack car dashboard web application with admin panel and authentication system.</p>
               </div>
+
+
+              <div className="project-card hidden">
+                <h3>Digital Signage</h3>
+                                    <a 
+                        href="https://github.com/WanhedaNL/car-dashboard" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="github-link"
+  >
+                           View on GitHub
+                    </a>
+                     <p>
+                      A digital signage (narrowcasting) web application for displaying real-time updates, images, and information on public screens.
+                        </p>
+              </div>
+
+
+
+              
+              
             </div>
           </section>
 
