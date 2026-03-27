@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cesim Portfolio</title>
+  <link rel="stylesheet" href="./css/index.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <div class="App">
+    <header>
+      <div class="top-bar">
+        <nav>
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#">BLOG</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="hero-content hero-text">
+        <div class="hero-left-text">
+          <h1 id="hello-topbar">Hallo</h1>
+          <h1 id="name-topbar">Ik ben Cesim</h1>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="content-wrapper">
+
+        <section id="about">
+          <article class="about-text-content">
+            <p>
+              Wat mij typeert als developer is mijn nieuwsgierigheid en mijn sterke motivatie
+              om continu nieuwe technologieën en programmeertalen te leren. Ik werk graag aan
+              projecten waarin ik mezelf kan blijven ontwikkelen en mijn vaardigheden verder
+              kan verbeteren.
+            </p>
+          </article>
+        </section>
+
+        <hr class="line" />
+
+        <section class="skills-content">
+          <h1>Skills</h1>
+          <article class="skills hidden">
+            <ul>
+              <li>HTML (BASIC)</li>
+              <li>CSS (BASIC)</li>
+              <li>JAVASCRIPT (BASIC)</li>
+              <li>PHP (BASIC)</li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="projects">
+          <div class="projects-grid">
+
+            <div class="project-card hidden">
+              <h3>Car Dashboard</h3>
+              <a
+                href="https://github.com/WanhedaNL/car-dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                View on GitHub
+              </a>
+              <p>
+                A full-stack car dashboard web application with admin panel and authentication system.
+              </p>
+            </div>
+
+            <div class="project-card hidden">
+              <h3>Digital Signage</h3>
+              <a
+                href="https://github.com/WanhedaNL/car-dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="github-link"
+              >
+                View on GitHub
+              </a>
+              <p>
+                A digital signage (narrowcasting) web application for displaying real-time updates,
+                images, and information on public screens.
+              </p>
+            </div>
+
+          </div>
+        </section>
+
+        <section id="contact">
+          <div class="contact-form hidden">
+            <h2>CONTACT</h2>
+
+            <form action="https://formspree.io/f/xjgadvpy" method="POST">
+              <input type="hidden" name="_next" value="index.html" />
+
+              <div class="input-group">
+                <label for="fname">First Name</label>
+                <input
+                  type="text"
+                  name="firstname"
+                  id="fname"
+                  placeholder="Type your name"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                />
+              </div>
+
+              <div class="input-group">
+                <label for="message">Your message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Type..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                Submit
+              </button>
+            </form>
+
+            <div class="social-contacts">
+              <ul>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/WanhedaNL" target="_blank"><i class="fab fa-github"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="scroll.js"></script>
+</body>
+</html>
