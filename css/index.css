@@ -165,6 +165,16 @@ body {
   flex-direction: column;
   gap: 55px;
 }
+.skills ul li i {
+  font-size: 1.5rem;
+  margin-right: 12px;
+}
+
+.fa-html5    { color: #E34F26; }
+.fa-css3-alt { color: #1572B6; }
+.fa-js       { color: #F7DF1E; }
+.fa-php      { color: #777BB4; }
+
 .skills ul li{
 width: auto;
    padding: 0 20px;
