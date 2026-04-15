@@ -1,3 +1,18 @@
+// Typing efekti
+const typingEl = document.getElementById("name-topbar");
+const text = "Ik ben Cesim";
+let i = 0;
+
+function type() {
+  if (i < text.length) {
+    typingEl.textContent += text.charAt(i);
+    i++;
+    setTimeout(type, 100);
+  }
+}
+
+type();
+
 const hiddenElements = document.querySelectorAll(".hidden");
 
 const observer = new IntersectionObserver((entries) => {
